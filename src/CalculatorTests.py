@@ -16,8 +16,14 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(calculator.add(3, 2), 5)
 
     def test_subtraction_method_calculator(self):
+        print('gary')
         calculator = Calculator()
-        self.assertEqual(calculator.sub(3, 2), 1)
+        self.assertEqual(calculator.sub(5, 2), 3)
+
+    def test_multiplication_method_calculator(self):
+        print('raj')
+        calculator = Calculator()
+        self.assertEqual(calculator.mul(3, 3), 9)
 
 
 if __name__ == '__main__':
