@@ -1,4 +1,5 @@
 from addition import addition
+from subtraction import subtraction
 
 class Calculator:
     result = 0
@@ -12,3 +13,6 @@ class Calculator:
         self.result = addition(a,b)
         return self.result
 
+    def sub(self, a, b):
+        self.result = subtraction(a,b)
+        return self.result
