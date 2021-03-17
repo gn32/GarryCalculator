@@ -1,5 +1,5 @@
 def addition(a, b):
-    a = float(a)
-    b = float(b)
+    a = int(a)
+    b = int(b)
     c = a + b
     return int(c)
