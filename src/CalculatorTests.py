@@ -3,39 +3,35 @@ from Calculator import Calculator
 
 
 class MyTestCase(unittest.TestCase):
+
+    def setUp(self) -> None:
+        self.calculator = Calculator()
+
     def test_instantiate_calculator(self):
-        calculator = Calculator()
-        self.assertIsInstance(calculator, Calculator)
+        self.assertIsInstance(self.calculator, Calculator)
 
     def test_results_property_calculator(self):
-        calculator = Calculator()
-        self.assertEqual(calculator.result, 4)
+        self.assertEqual(self.calculator.result, 4)
 
     def test_addition_method_calculator(self):
-        calculator = Calculator()
-        self.assertEqual(calculator.add(3, 2), 5)
+        self.assertEqual(self.calculator.add(3, 2), 5)
 
     def test_subtraction_method_calculator(self):
-        calculator = Calculator()
-        self.assertEqual(calculator.sub(5, 2), 3)
+        self.assertEqual(self.calculator.sub(5, 2), 3)
 
     def test_multiplication_method_calculator(self):
-        calculator = Calculator()
-        self.assertEqual(calculator.mul(3, 3), 9)
+       self.assertEqual(self.calculator.mul(3, 3), 9)
 
     def test_division_method_calculator(self):
-        calculator = Calculator()
-        self.assertEqual(calculator.div(4, 2), 2)
+        self.assertEqual(self.calculator.div(4, 2), 2)
 
 
     def test_square_method_calculator(self):
-        calculator = Calculator()
-        self.assertEqual(calculator.sq(5), 25)
+        self.assertEqual(self.calculator.sq(5), 25)
 
 
     def test_squareroot_method_calculator(self):
-        calculator = Calculator()
-        self.assertEqual(calculator.sqrt(16), 4)
+        self.assertEqual(self.calculator.sqrt(16), 4)
 
 
 if __name__ == '__main__':
