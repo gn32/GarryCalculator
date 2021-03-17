@@ -2,6 +2,7 @@ from addition import addition
 from subtraction import subtraction
 from multiplication import multiplication
 from division import division
+from square import square
 
 
 class Calculator:
@@ -27,3 +28,8 @@ class Calculator:
     def div(self, a, b):
         self.result = division(a, b)
         return self.result
+
+    def sq(self, a):
+        self.result = square (a)
+        return self.result
+
