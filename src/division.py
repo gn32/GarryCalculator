@@ -1,5 +1,5 @@
 def division(a, b):
     a = float(a)
     b = float(b)
-    c = a / b
-    return int(c)
+    c = b / a
+    return float(round(c, 9))
