@@ -2,4 +2,4 @@ def square(a):
     a = float(a)
 
     c = a ** 2
-    return int(c)
+    return float(c)

@@ -31,10 +31,9 @@ class Calculator:
         return self.result
 
     def sq(self, a):
-        self.result = square (a)
+        self.result = square(a)
         return self.result
 
     def sqrt(self, a):
         self.result = squareroot(a)
         return self.result
-
