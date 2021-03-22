@@ -35,13 +35,19 @@ class MyTestCase(unittest.TestCase):
         test_data = CsvReader('/src/division.csv').data
         for row in test_data:
             self.assertEqual(self.calculator.div(row['Value 1'], row['Value 2']), float(row['Result']))
-            self.assertEqual(self.calculator.result, float(row['Result']))
+            self.assertEqual(self.calculator.result, round(float(row['Result']),9))
 
     def test_square(self):
         test_data = CsvReader('/src/square.csv').data
         for row in test_data:
             self.assertEqual(self.calculator.sq(row['Value 1']), float(row['Result']))
             self.assertEqual(self.calculator.result, float(row['Result']))
+
+    def test_squareroot(self):
+        test_data = CsvReader('/src/squareroot.csv').data
+        for row in test_data:
+            self.assertEqual(self.calculator.sqrt(row['Value 1']), round(float(row['Result']),8))
+            self.assertEqual(self.calculator.result, round(float(row['Result']),8))
 
 
 
